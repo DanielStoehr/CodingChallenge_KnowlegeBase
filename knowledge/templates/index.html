@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="start-header">
+<div class="content-header">
   <h1>Knowledge Base</h1>
   <div class="subtitle">Durchsuche unsere großartige<br />Datenbank mit Fachwissen.</div>
   <form action="/" method="post">
     {% csrf_token %}
-    <input type="text" id="search" placeholder="Knowledge Base durchsuchen" />
+    <input type="text" id="search" name="search" placeholder="Knowledge Base durchsuchen" value="{{search}}" />
   </form>
 </div>
 
@@ -17,8 +17,8 @@
     <div>{{post.text}}</div>
   </div>
   {% endfor %}
+  <a href="/add" class="form-button position-right-bottom">+ Hinzufügen</a>
 </div>
-
 
 
 
