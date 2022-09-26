@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from knowledge.views import add, agb, legal_notice, start
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", start),
+    path("add/", add),
+    path("agb/", agb),
+    path("legal-notice/", legal_notice),
 ]
