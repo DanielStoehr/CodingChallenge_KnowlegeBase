@@ -57,7 +57,7 @@ body {
   width: 300px;
 }
 
-.posts {
+.content {
   background-color: #ecf1f5;
   display: flex;
   flex-direction: column;
@@ -72,6 +72,12 @@ body {
   margin-bottom: 32px;
   padding: 16px;
   box-shadow: 5px 10px 18px #888888;
+}
+
+@media screen and (max-width: 600px) {
+  .post {
+    width: 80%;
+  }
 }
 
 .post-title {
@@ -96,7 +102,30 @@ body {
 }
 
 .position-right-bottom {
-  position: absolute;
+  position: sticky;
   right: 32px;
   bottom: 32px;
+  align-self: flex-end;
+}
+
+.form-add {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.form-add input,
+.form-add textarea {
+  margin-bottom: 16px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #bcbdbe;
+}
+
+.button-save {
+  align-self: flex-end;
 }

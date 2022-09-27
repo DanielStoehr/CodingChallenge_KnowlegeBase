@@ -20,8 +20,8 @@ from knowledge.views import add, agb, legal_notice, start
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", start),
-    path("add/", add),
+    path("", start, name="start"),
+    path("add/", add, name="add"),
     path("agb/", agb),
     path("legal-notice/", legal_notice),
 ]

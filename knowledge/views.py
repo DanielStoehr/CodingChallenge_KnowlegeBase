@@ -20,6 +20,11 @@ def start(request):
 
 
 def add(request):
+    if request.method == "POST":
+        title = request.POST["title"]
+        text = request.POST["text"]
+        author = request.POST["author"]
+        KnowlegeBase.objects.create(title=title, text=text, author=author)
     return render(request, "add.html")
 
 
